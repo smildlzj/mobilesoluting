@@ -50,4 +50,4 @@
 
 
 ### 注意
-Chrome 开发团队不久前宣布，在 Chrome 32 这一版中，他们将[在包含 width=device-width 或者置为比 viewport 值更小的页面上禁用双击缩放]（https://codereview.chromium.org/18850005/）。当然，没有双击缩放就没有 300 毫秒点击延迟。
+Chrome 开发团队不久前宣布，在 Chrome 32 这一版中，他们将[在包含 width=device-width 或者置为比 viewport 值更小的页面上禁用双击缩放](https://codereview.chromium.org/18850005/)。当然，没有双击缩放就没有 300 毫秒点击延迟。
