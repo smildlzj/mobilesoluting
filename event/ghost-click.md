@@ -7,8 +7,8 @@
 由于为了解决300ms的延迟，很多人使用touchend模拟click事件（如zepto的tap事件）, [fastclick](https://github.com/ftlabs/fastclick)去解决。
 
 那么问题来了？
-当一旦触发了tap事件之后，被点击的对象隐藏切换之类（如：点击关闭对话框），那么300ms之后，click事件被触发，但是原本的对象已经被隐藏了,于是在那个坐标位置的元素被触发了click事件。Ghost Click/点透就是这样来了。
     
+如果绑定tap方法的dom元素在tap方法触发后会隐藏、css3 transfer移走、requestAnimationFrame移走等，而“隐藏、移走”后，它底下同一位置正好有一个dom元素绑定了click的事件、或者有浏览器认为可以被点击有交互反应的dom元素（举例：如input type=text被点击有交互反应是获得焦点并弹起虚拟键盘），则会出现“Ghost Click/点透”现象。
     
 ##解决方案
 ### DIV层阻挡(推荐方案)
