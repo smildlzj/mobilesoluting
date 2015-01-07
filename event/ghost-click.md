@@ -4,7 +4,7 @@
 
 这个 300ms 为什么会被设计出来呢? 原因在于单击后面还有个双击缩放动作，这个涉及到触摸设备的手势交互行为原生设计，在平台提供商比如苹果和 google ,本意是通过 300ms 来区分两者之间的不同行为,单击一次等待 300ms 后没有再次单击那么就会触发缩放等双击行为。本意是好的,正常的逻辑实现,但是在现实的应用场景中,用户往往会觉得 web app 的事件触发不是那么灵敏,有那么一点延迟。
 ## Ghost Click/点透的来源
-由于为了解决300ms的延迟，很多人使用touchend模拟click事件（如zepto的tap事件）, [fastclick](https://github.com/ftlabs/fastclick)去解决。
+由于为了解决300ms的延迟，很多人使用touchend模拟click事件（如zepto的tap事件）, [fastclick](https://github.com/ftlabs/fastclick)去解决。（fastclick没有ghost click/点透的问题，虽然也使用了touch事件，但是在touchend时候主动触发click事件）
 
 那么问题来了？
     

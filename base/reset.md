@@ -39,3 +39,5 @@
 -webkit-appearance: none;
 ```
 
+## 更多
+* [HTML head 头标签](http://fex.baidu.com/blog/2014/10/html-head-tags/?utm_source=open-lib)
